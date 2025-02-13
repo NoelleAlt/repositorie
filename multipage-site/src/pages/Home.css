@@ -1,7 +1,28 @@
+
 .home .card {
   padding: 20px;
-  border: 1px solid #e4e4e4;
-  border-radius: 4px;
-  box-shadow: 4px 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e4e4e4; /* Light gray border */
+  border-radius: 8px; /* Slightly increased border radius for a softer look */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
   margin-bottom: 20px;
+  background-color: #e0f7fa; /* Light pastel blue */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+
+.home .card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+
+.home .card h2 {
+  color: #00796b; /* Pastel teal color for headings */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+
+.home .card p {
+  color: #555; /* Softer dark color for text */
+  line-height: 1.6; /* Improved line height for readability */
 }

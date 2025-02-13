@@ -1,22 +1,46 @@
 .App {
   max-width: 960px;
   margin: 0 auto;
+  background-color: #b2cdff; /* Light background for the app */
+  padding: 20px; /* Added padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
+
 nav {
   display: flex;
   margin: 0 auto 60px;
-  gap: 10px;
+  gap: 15px; /* Increased gap for better spacing */
   align-items: center;
+  background-color: #e0f7fa; /* Light pastel blue background for the nav */
+  padding: 10px; /* Added padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
 }
+
+
 nav h1 {
   margin-right: auto;
+  color: #00796b; /* Pastel teal color for the heading */
 }
+
+
 nav a {
-  color: #333;
-  padding: 4px 10px;
+  color: #555; /* Softer dark color for links */
+  padding: 6px 12px; /* Slightly larger padding for better click area */
+  border-radius: 4px; /* Rounded corners for links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
+
+
+nav a:hover {
+  background-color: #b2ebf2; /* Light pastel blue on hover */
+  color: #004d40; /* Darker teal color on hover */
+}
+
+
 nav a.active {
   color: white;
-  background: #333;
+  background: #00796b; /* Pastel teal for active link */
   text-decoration: none;
 }

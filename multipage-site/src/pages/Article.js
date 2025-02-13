@@ -1,17 +1,23 @@
+
 import { useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { useFetch } from "../hooks/useFetch"
+
 
 export default function Article({articles}) {
   const { urlId } = useParams()
   //const history = useHistory()
 
+
   const navigate = useNavigate()
+
 
   const article = articles.find( ({ id }) => id === urlId);
 
+
   console.log("id: " + urlId)
   console.log(articles)
+
 
   if (!article) {
     setTimeout(() => {
@@ -20,6 +26,7 @@ export default function Article({articles}) {
       navigate('/');
     }, 2000)
   }
+
 
   return (
     <div>
