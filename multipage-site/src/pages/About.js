@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div>
       <h2>About Us</h2>
-      <h3>MC Clara (@emceeclams)</h3>
+      <h3>MC Clare (@emceeclams)</h3>
       <p>Hello! call me Marie or emceeclams. I am an amateur web designer in 12th grade highschool. This website is a project my friends and I are working on in the sidelines.</p>
 
 
