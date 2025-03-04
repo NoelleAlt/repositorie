@@ -16,7 +16,7 @@ export default function Contact() {
 
 
       <h3>Our Contact Information:</h3>
-      <h4>MC Clara (@emceeclams)</h4>
+      <h4>MC Clare (@emceeclams)</h4>
       <li>Email: emceeclams@nmtacademy.edu.pea</li>
       <li>Phone: 1233-456-7870</li>
       <li>socials : @emceeclams in all platforms</li>
