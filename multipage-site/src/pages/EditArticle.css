@@ -1,0 +1,61 @@
+.edit-article {
+    color: #555; /* Softer dark color for text */
+    max-width: 480px; /* Maximum width for the form */
+    margin: 60px auto; /* Center the form with margin */
+    padding: 20px; /* Added padding for better spacing */
+    background-color: #e0f7fa; /* Light pastel blue background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.edit-article h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #00796b; /* Pastel teal color for headings */
+}
+
+.edit-article label {
+    display: block; /* Block display for labels */
+    margin: 20px 0 10px; /* Adjusted margin for better spacing */
+}
+
+.edit-article label span {
+    font-weight: bold; /* Bold text for labels */
+}
+
+.edit-article input,
+.edit-article textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px; /* Padding for better spacing */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1em; /* Font size for inputs */
+}
+
+.edit-article input:focus,
+.edit-article textarea:focus {
+    border-color: #00796b; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.edit-article button {
+    display: block; /* Block display for button */
+    width: 100%; /* Full width for button */
+    font-size: 1em; /* Font size for button */
+    color: #fff; /* White text color */
+    padding: 10px; /* Increased padding for better click area */
+    border: 0; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #00796b; /* Pastel teal background */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above button */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.edit-article button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+.edit-article .error {
+    color: red; /* Red color for error messages */
+    margin-top: 10px; /* Space above error messages */
+}

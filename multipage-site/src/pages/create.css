@@ -1,0 +1,40 @@
+/* create.css */
+.create {
+    color: #555; /* Softer dark color for text */
+    max-width: 480px; /* Maximum width for the form */
+    margin: 60px auto; /* Center the form with margin */
+    padding: 20px; /* Added padding for better spacing */
+    background-color: #e0f7fa; /* Light pastel blue background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.create label span {
+    display: block; /* Block display for labels */
+    margin: 20px 0 10px; /* Adjusted margin for better spacing */
+    font-weight: bold; /* Bold text for labels */
+}
+
+.create p {
+    margin-top: 10px; /* Space above paragraphs */
+    font-size: 0.9em; /* Slightly larger font size for better readability */
+}
+
+.create button {
+    display: block; /* Block display for button */
+    width: 100%; /* Full width for button */
+    font-size: 1em; /* Font size for button */
+    color: #fff; /* White text color */
+    padding: 10px; /* Increased padding for better click area */
+    border: 0; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #00796b; /* Pastel teal background */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* No underline */
+    margin-top: 20px; /* Space above button */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.create button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}

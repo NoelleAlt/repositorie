@@ -1,60 +1,35 @@
-// Article.js
-
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { getDoc, doc } from "firebase/firestore";
-import { db } from '../firebase/config';
+import { useNavigate, useParams } from "react-router-dom"
+import {getDoc, doc} from 'firebase/firestore';
+import {db} from '../firebase/config'
+import { useEffect,useState } from 'react';
 
 export default function Article() {
-  const { urlId } = useParams();
-  const navigate = useNavigate();
+  const { urlId } = useParams()
+  const navigate = useNavigate()
+
+  console.log("id: " + urlId)
+
   const [article, setArticle] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchArticle = async () => {
-      try {
-        const ref = doc(db, "articles", urlId);
-        const snapshot = await getDoc(ref);
-        
-        if (snapshot.exists()) {
-          setArticle({ id: snapshot.id, ...snapshot.data() });
-        } else {
-          setError("No records found!");
-        }
-      } catch (err) {
-        setError("Error fetching article: " + err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+    const ref = doc(db, 'articles', urlId);
+    getDoc(ref)
+      .then((snapshot)=>{        
+        setArticle(snapshot.data());
+      })
 
-    fetchArticle();
+  },[])  
+  
 
-    // Cleanup function (if needed)
-    return () => {
-      // Any cleanup logic can go here
-    };
-  }, [urlId]);
-
-  // Redirect to home if there's an error after a delay
-  useEffect(() => {
-    if (error) {
-      const timer = setTimeout(() => {
-        navigate('/');
-      }, 2000);
-      return () => clearTimeout(timer); // Cleanup the timer
-    }
-  }, [error, navigate]);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  // if (!article) {
+  //   setTimeout(() => {
+  //     navigate('/')
+  //   }, 2000)
+  // }
 
   return (
     <div>
-      {error && <p>{error}</p>}
+      {!article && <p>No records found!</p>}
       {article && (
         <div key={article.id}>
           <h2>{article.title}</h2>
@@ -63,5 +38,5 @@ export default function Article() {
         </div>
       )}
     </div>
-  );
+  )
 }
